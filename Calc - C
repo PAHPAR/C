@@ -1,0 +1,53 @@
+
+
+#include <stdio.h>
+
+int main()
+{
+    int i,x,y,opcja;
+    float operacja;
+    
+    while(1){
+    
+    printf("Podaj liczbę x i y: \n");
+    printf("Liczba x: ");
+    scanf("%d", &x);
+    printf("Liczba y: ");
+    scanf("%d", &y);
+    
+    printf("Wybierz działanie:\n");
+    printf("1.Dodawanie\n");
+    printf("2.Odejmowanie\n");
+    printf("3.Mnożenie\n");
+    printf("4.Dzielenie\n");
+    printf("5.Wyjście\n");
+    scanf("%d", &opcja);
+    
+    switch (opcja) {
+        case 1:
+            operacja = x + y;
+            printf("Dodawanie = %2.f\n", operacja);
+            break;
+        case 2:
+            operacja = x - y;
+            printf("Odejmowanie = %2.f\n", operacja);
+            break;
+        case 3:
+            operacja = x * y;
+            printf("Mnożenie = %2.f\n", operacja);
+            break;
+        case 4:
+            operacja = x / y;
+            printf("Dzielnie = %2.f\n", operacja);
+            break;
+        case 5:
+            operacja = x + y;
+            printf("Koniec");
+            return 0;
+        default:
+            printf("Wybierz dostępną opcję!");
+            return 0;
+    }
+}
+    return 0;
+}
